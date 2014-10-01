@@ -7,7 +7,7 @@ import com.parse.SignUpCallback;
 
 public class User{
 
-	private ParseUser pUser;
+	public ParseUser pUser;
 	private String userId;
 	private String objectId;
 	private String username;
