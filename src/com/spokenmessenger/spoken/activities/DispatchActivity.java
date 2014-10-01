@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.spokenmessenger.spoken.WelcomeActivity;
 import com.spokenmessenger.spoken.models.User;
 
 public class DispatchActivity extends Activity {
@@ -24,7 +25,7 @@ public class DispatchActivity extends Activity {
 			startActivity(new Intent(this, WelcomeActivity.class));
 		}
 		
-		startActivity(new Intent(this, MainActivity.class));
+//		startActivity(new Intent(this, MainActivity.class));
 	}
 	
 	
