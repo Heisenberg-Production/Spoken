@@ -1,9 +1,11 @@
-package com.spokenmessenger.spoken;
+package com.spokenmessenger.spoken.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
+import com.spokenmessenger.spoken.R;
+import com.spokenmessenger.spoken.R.layout;
 import com.spokenmessenger.spoken.fragments.ContactsFragment;
 import com.spokenmessenger.spoken.fragments.RecentFragment;
 

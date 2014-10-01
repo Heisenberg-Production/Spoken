@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.spokenmessenger.spoken.MainActivity;
 import com.spokenmessenger.spoken.models.User;
 
 public class DispatchActivity extends Activity {
@@ -13,16 +12,19 @@ public class DispatchActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 //		setContentView(R.layout.activity_dispatch);
+		showActivity();
+	}
+	
+	// Show main app if user is logged in, otherwise show login screen
+	private void showActivity() {
 		if (User.getCurrentUser().pUser != null) {
-			// Start an intent for the logged in activity
+			// TODO: Read accounts for credentials and attempt to log in first
 			startActivity(new Intent(this, MainActivity.class));
-			} else {
-			// Start and intent for the logged out activity
-//			startActivity(new Intent(this, WelcomeActivity.class));
+		} else {
+			startActivity(new Intent(this, WelcomeActivity.class));
 		}
 		
 		startActivity(new Intent(this, MainActivity.class));
-
 	}
 	
 	
