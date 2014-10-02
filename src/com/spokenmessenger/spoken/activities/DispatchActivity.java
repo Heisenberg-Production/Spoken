@@ -25,7 +25,7 @@ public class DispatchActivity extends Activity {
 			startActivity(new Intent(this, WelcomeActivity.class));
 		}
 		
-//		startActivity(new Intent(this, MainActivity.class));
+		startActivity(new Intent(this, MainActivity.class));
 	}
 	
 	

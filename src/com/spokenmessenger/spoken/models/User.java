@@ -23,8 +23,8 @@ public class User{
 		pUser.signUpInBackground(signUpCallback);	
 	}
 	
-	public void logInBackground(String username, String password, LogInCallback logInCallback){
-		pUser.logInInBackground(username, password, logInCallback);
+	public static void logInBackground(String username, String password, LogInCallback logInCallback){
+		ParseUser.logInInBackground(username, password, logInCallback);
 	}
 	
 	public static User getCurrentUser(){
@@ -33,21 +33,3 @@ public class User{
 		return u;
 	}
 }
-
-//User currentUser = User.getCurrent();
-//currentUser.invitesSent++;
-//currentUser.save();
-
-/*
- * 
- * 
-
-String username;
-String password;
-
-User user = new User();
-user.signUpInBackground(new SignUpCallBack() {
-	publc void done() {
-		
-	}
-})*/
