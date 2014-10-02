@@ -55,7 +55,7 @@
         <ImageView
             android:id="@+id/ivActionTab"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:src="@drawable/btn_newchat" />
