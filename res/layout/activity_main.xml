@@ -16,51 +16,40 @@
     </FrameLayout>
     
         
-    <RelativeLayout 
+    <LinearLayout 
         android:id="@+id/rlBottomNav"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="#ccc"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true" 
         android:layout_alignParentRight="true" >
-
-        <ImageView
-            android:id="@+id/ivBottomBar"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/bottombar_bg" />
         
         <ImageView
             android:id="@+id/ivRecentTab"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
             android:onClick="onTapRecentTab"
             android:src="@drawable/btn_recent_green" />
         
         <ImageView
             android:id="@+id/ivContactsTab"
-            android:layout_toLeftOf="@+id/ivRecentTab"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
             android:onClick="onTapContactsTab"
             android:src="@drawable/btn_contact_off" />
-
-        <ImageView
-            android:id="@+id/ivActionTab"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/btn_newchat" />
-        
-    </RelativeLayout>
-
+    
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/ivActionTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onTap"
+        android:src="@drawable/btn_newchat" />
 
 </RelativeLayout>

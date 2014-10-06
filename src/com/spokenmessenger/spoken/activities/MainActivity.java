@@ -46,4 +46,9 @@ public class MainActivity extends FragmentActivity {
 		ft.replace(R.id.flMainContainer, contactsFragment);
 		ft.commit();
 	}
+	
+	// Show Camera View
+	public void onTapRedCircle(View v) {
+		
+	}
 }
