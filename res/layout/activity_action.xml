@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flActionView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.spokenmessenger.spoken.ui.CameraPreview
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/llCameraBottomNav" />
+    
+    <ImageView 
+        android:id="@+id/ivtakenPhoto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:visibility="invisible" />
+    
+    
+
+    <LinearLayout 
+        android:id="@+id/llCameraBottomNav"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ccc"
+        android:layout_gravity="bottom" 
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal" >
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCaptureClick"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/button_capture_text" />
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/llmemeBottomNav"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ccc"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal" >
+        
+        <Button
+            android:id="@+id/btnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onTopClick"
+            android:text="Top" />
+        
+        <Button
+            android:id="@+id/btnBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBottomClick"
+            android:text="Bottom" />
+    
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:background="@null"
+        android:ems="10" >
+
+    </EditText>
+    
+    <EditText
+        android:id="@+id/etBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@null"
+        android:layout_above="@+id/llCameraBottomNav"
+   		android:gravity="center_horizontal"
+        android:ems="10" >
+
+    </EditText>
+
+</RelativeLayout>
