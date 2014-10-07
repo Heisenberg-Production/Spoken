@@ -9,5 +9,8 @@
     <string name="title_activity_welcome">WelcomeActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_action">ActionActivity</string>
+    <string name="button_capture_text">SNAP</string>
+    <string name="content_desc_overlay">overlay</string>
 
 </resources>
