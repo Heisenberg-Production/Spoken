@@ -4,6 +4,7 @@ import java.io.File;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -12,6 +13,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.spokenmessenger.spoken.ActionActivity;
 import com.spokenmessenger.spoken.R;
@@ -26,18 +28,24 @@ public class MainActivity extends FragmentActivity {
 	
 	RecentFragment recentFragment;
 	ContactsFragment contactsFragment;
+	
+	ImageView recentTab;
+	ImageView contactsTab;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
 		if(cameraNotDetected()){
         	Log.d("debug", "No camera detected, clicking the button below will have unexpected behaviour.");
         } else {
         	Log.d("debug", "Camera detected");
         }
+		
+		recentTab = (ImageView) findViewById(R.id.ivRecentTab);
+		contactsTab = (ImageView) findViewById(R.id.ivContactsTab);
 	}
+	
 	
 	private boolean cameraNotDetected() {
 		return !getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
@@ -45,6 +53,10 @@ public class MainActivity extends FragmentActivity {
 	
 	// Show Recent Messages Fragment
 	public void onTapRecentTab(View v) {
+		recentTab.setBackgroundColor(Color.parseColor("#447a3d"));
+		recentTab.setImageResource(R.drawable.btn_recent_green);
+		contactsTab.setImageResource(R.drawable.btn_contact_off);
+		contactsTab.setBackgroundColor(Color.parseColor("#292929"));
 		if (recentFragment == null) {
 			recentFragment = new RecentFragment();
 		}
@@ -58,6 +70,12 @@ public class MainActivity extends FragmentActivity {
 	
 	// Show Contacts Fragment
 	public void onTapContactsTab(View v) {
+		// Change background image and color for both buttons
+		recentTab.setBackgroundColor(Color.parseColor("#292929"));
+		recentTab.setImageResource(R.drawable.btn_recent_android_grey);
+		contactsTab.setImageResource(R.drawable.btn_contact_android_blue);
+		contactsTab.setBackgroundColor(Color.parseColor("#00abfa"));
+		
 		if (contactsFragment == null) {
 			contactsFragment = new ContactsFragment();
 		}

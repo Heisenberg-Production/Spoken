@@ -20,7 +20,6 @@
         android:id="@+id/rlBottomNav"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:background="#ccc"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true" 
         android:layout_alignParentRight="true" >
@@ -31,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:onClick="onTapRecentTab"
+            android:background="#447a3d"
             android:src="@drawable/btn_recent_green" />
         
         <ImageView
@@ -38,6 +38,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:background="#292929"
             android:onClick="onTapContactsTab"
             android:src="@drawable/btn_contact_off" />
     
@@ -50,6 +51,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="onTapRedCircle"
+        android:paddingBottom="0dp"
         android:src="@drawable/btn_newchat" />
 
 </RelativeLayout>

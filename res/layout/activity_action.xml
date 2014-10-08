@@ -16,7 +16,8 @@
     <ImageView 
         android:id="@+id/ivtakenPhoto"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" 
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY" 
         android:visibility="invisible" />
     
     
@@ -72,6 +73,7 @@
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
         android:background="@null"
+        android:textColor="@color/white"
         android:ems="10" >
 
     </EditText>
@@ -84,8 +86,28 @@
         android:background="@null"
         android:layout_above="@+id/llCameraBottomNav"
    		android:gravity="center_horizontal"
+   		android:textSize="20sp"
+   		android:shadowColor="#000"
+   		android:shadowDx="1"
+   		android:shadowDy="2"
+   		android:shadowRadius="2"
         android:ems="10" >
 
     </EditText>
+    
+<!--        <com.spokenmessenger.spoken.ui.MagicTextView
+       xmlns:qwerjk="http://schemas.android.com/apk/res/com.spokenmessenger.spoken"
+       android:id="@+id/etTop"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:background="@null"
+       android:ems="10"
+       android:gravity="center_horizontal"
+       android:padding="10dp"
+       android:textColor="@color/white"
+       qwerjk:strokeColor="#000"
+       qwerjk:strokeJoinStyle="miter"
+       qwerjk:strokeWidth="5dp" /> -->
 
 </RelativeLayout>
